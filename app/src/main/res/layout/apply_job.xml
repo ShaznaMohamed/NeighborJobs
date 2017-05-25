@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <android.support.design.widget.AppBarLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="24dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/card_margin"
+                android:layout_marginLeft="@dimen/card_margin"
+                android:layout_marginRight="@dimen/card_margin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.CardContent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Basic Information"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="19dp">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/appnamee"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Name"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:singleLine="true" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/appagee"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Age"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:singleLine="true" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="19dp">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/appemaile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Email"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            android:singleLine="true" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/appphonee"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Phone"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:singleLine="true" />
+
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/card_margin"
+            android:layout_marginLeft="@dimen/card_margin"
+            android:layout_marginRight="@dimen/card_margin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.CardContent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Preparation"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="19dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/appskillse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Skills"
+                    android:inputType="textLongMessage"
+                    android:maxLines="2"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="19dp">
+
+                    <TextView
+                        android:id="@+id/jobTitleeww"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Do you have any previous experience?"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/expGroup">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:id="@+id/expyes"
+                        android:layout_gravity="bottom"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginLeft="50dp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:id="@+id/expno" />
+
+                </RadioGroup>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="19dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/appexperiencee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Period of experience"
+                        android:inputType="textLongMessage"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:visibility="gone"/>
+
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="19dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/appcovere"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Cover Note"
+                        android:inputType="textLongMessage"
+                        android:maxLines="3"
+                        android:singleLine="true" />
+
+
+                </android.support.design.widget.TextInputLayout>
+
+                <!--<android.support.design.widget.TextInputLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:paddingBottom="19dp">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/jobTitlleeww"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Would you like to upload a resume?"-->
+                        <!--android:inputType="text"-->
+                        <!--android:maxLines="1"-->
+                        <!--android:singleLine="true" />-->
+
+                <!--</android.support.design.widget.TextInputLayout>-->
+
+                <!--<RadioGroup-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:id="@+id/uploadgrp">-->
+
+                    <!--<RadioButton-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Yes"-->
+                        <!--android:id="@+id/upload"-->
+                        <!--android:layout_gravity="bottom"-->
+                        <!--android:layout_marginRight="50dp"-->
+                        <!--android:layout_marginLeft="50dp" />-->
+
+                    <!--<RadioButton-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="No"-->
+                        <!--android:id="@+id/radioOnlimne" />-->
+
+
+                <!--</RadioGroup>-->
+
+                <!--<Button-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Upload Resume"-->
+                    <!--android:id="@+id/uploadresume"-->
+                    <!--android:theme="@style/MyButton"-->
+                    <!--android:visibility="gone"/>-->
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Next"
+                    android:id="@+id/jobappnext"
+                    android:theme="@style/MyButton"
+                    style="@style/MyButton"
+                    android:textAlignment="center" />
+
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.design.widget.CoordinatorLayout>

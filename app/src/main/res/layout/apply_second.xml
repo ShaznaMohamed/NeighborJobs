@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Job Application"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="24dp">
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/card_margin"
+                android:layout_marginLeft="@dimen/card_margin"
+                android:layout_marginRight="@dimen/card_margin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.CardContent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Work Description"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="19dp">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/appssalarye"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Expected Salary Amount"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:singleLine="true" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Availability"/>
+
+                    <android.support.v7.widget.AppCompatSpinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/appsavailablee"
+                        android:entries="@array/applyavailables"
+                        android:paddingBottom="19dp">
+
+                    </android.support.v7.widget.AppCompatSpinner>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="19dp">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/appsnoofhrs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Number of hours"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:singleLine="true" />
+
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <!--<android.support.design.widget.TextInputLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingBottom="19dp">-->
+
+                        <!--<AutoCompleteTextView-->
+                            <!--android:id="@+id/jobTitlse"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:hint="Can start on..."-->
+                            <!--android:inputType="text"-->
+                            <!--android:maxLines="1"-->
+                            <!--android:singleLine="true" />-->
+
+                    <!--</android.support.design.widget.TextInputLayout>-->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Can start working from"/>
+                    <DatePicker
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/datePicker"
+                        android:layout_gravity="center_horizontal"
+                        android:contextClickable="true"
+                        android:onClick="onDateSetListene" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/card_margin"
+            android:layout_marginLeft="@dimen/card_margin"
+            android:layout_marginRight="@dimen/card_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.CardContent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Other Information"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+
+            <TextView
+                    android:id="@+id/jobTitleeww"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Are you willing to relocate?"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/appsrelocatee">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:id="@+id/radioInPerson"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginLeft="50dp" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:id="@+id/radioOnline" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/jobTbitleeww"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Do you need supervision?"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/appssupervisione">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:id="@+id/njjj"
+
+                    android:layout_marginRight="50dp"
+                    android:layout_marginLeft="50dp" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:id="@+id/radionOnline" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/jobTixtleeww"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Do you have other supporters?"
+                android:inputType="textLongMessage"
+                android:singleLine="true" />
+
+                  <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/appssupporterse">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:id="@+id/raxdioInPerson"
+
+                    android:layout_marginRight="50dp"
+                    android:layout_marginLeft="50dp" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:id="@+id/radmioOnline" />
+
+            </RadioGroup>
+            </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/card_margin"
+            android:layout_marginLeft="@dimen/card_margin"
+            android:layout_marginRight="@dimen/card_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.CardContent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="About yourself"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+
+            <TextView
+                android:id="@+id/jombTixtleeww"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Would you like to add any reference?"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/referencegrp">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:id="@+id/raxdmioInPerson"
+                    android:layout_gravity="bottom"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginLeft="50dp"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:id="@+id/radmioOmline" />
+
+            </RadioGroup>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="19dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/refname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Referee Name with title"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:visibility="gone"/>
+
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="19dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/redemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Referee Email"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:visibility="gone"/>
+
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="19dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/appsinfluencee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="What influenced you to apply"
+                    android:inputType="textLongMessage"
+                    android:maxLines="3"
+                    android:singleLine="true" />
+
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="19dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/appsmessagee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Any other message"
+                    android:inputType="textLongMessage"
+                    android:minLines="2"
+                    android:singleLine="true" />
+
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/card_margin"
+            android:layout_marginLeft="@dimen/card_margin"
+            android:layout_marginRight="@dimen/card_margin">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Apply "
+                    android:id="@+id/applybutt"
+                    android:theme="@style/MyButton" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Chat with Employer"
+                    android:id="@+id/nexttochat"
+                    android:layout_marginLeft="55dp"
+                    android:theme="@style/MyButton"/>
+
+
+        </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.design.widget.CoordinatorLayout>
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinnerItems">
+        <item>item1</item>
+        <item>item2</item>
+        <item>item3</item>
+        <item>item4</item>
+    </string-array>
+
+    <string-array name="MainItems">
+        <item>Gardening</item>
+        <item>Education</item>
+        <item>Helper</item>
+        <item>Plumber</item>
+    </string-array>
+
+    <string-array name="SubItems">
+        <item>Literature</item>
+        <item>Clean roof</item>
+        <item>Repair kitchen</item>
+        <item>Cut grass</item>
+    </string-array>
+
+    <string-array name="TypeItems">
+        <item>Cash</item>
+        <item>Credit card</item>
+        <item>Cheque</item>
+    </string-array>
+
+    <string-array name="ModeItems">
+        <item>Daily</item>
+        <item>At the end</item>
+    </string-array>
+
+</resources>
