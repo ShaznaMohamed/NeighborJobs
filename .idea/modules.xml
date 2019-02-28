@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/NeighbourJobs.iml" filepath="$PROJECT_DIR$/NeighbourJobs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NeighborJobs.iml" filepath="$PROJECT_DIR$/NeighborJobs.iml" />
+      <module fileurl="file://D:\AWS\CodeBuild\neighborJobsprojectClonedFromGit\NeighborJobs\NeighbourJobs.iml" filepath="D:\AWS\CodeBuild\neighborJobsprojectClonedFromGit\NeighborJobs\NeighbourJobs.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\AWS\CodeBuild\neighborJobsprojectClonedFromGit\NeighborJobs\app\app.iml" filepath="D:\AWS\CodeBuild\neighborJobsprojectClonedFromGit\NeighborJobs\app\app.iml" />
     </modules>
   </component>
 </project>
